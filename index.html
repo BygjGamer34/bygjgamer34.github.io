@@ -4,39 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BygjClient — BygjSoftware</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
+    
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 1.5rem; max-width: 900px; margin: auto; }
-        header, footer { text-align: center; }
-        .actions { margin-top: 1rem; display:flex; gap:1rem; justify-content:center; }
-        .btn { display:inline-block; padding:0.6rem 1rem; background:#ff5722; color:#fff; text-decoration:none; border-radius:6px; }
-        .btn.secondary { background:#03a9f4; }
+        :root {
+            --primary: #ff5722;
+            --secondary: #03a9f4;
+            --bg-dark: #0f111a;
+            --card-bg: #1a1c29;
+            --text-light: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1c29 0%, #0f111a 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-yt { background: #ff0000; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+        .btn-gh { background: #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        .highlight { color: var(--primary); font-weight: bold; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>BygjClient</h1>
-        <p><strong>BygjClient</strong> es un cliente de Minecraft con soporte para mods y múltiples funcionalidades desarrollado por <strong>BygjSoftware</strong>.</p>
+        <p class="subtitle">Elevando la experiencia de <span class="highlight">Minecraft</span> con optimización avanzada y personalización total.</p>
     </header>
 
     <main>
-        <section>
-            <h2>¿Qué es BygjClient?</h2>
-            <p>BygjClient es un cliente personalizado para Minecraft que incluye compatibilidad con mods, ajustes de rendimiento y opciones de personalización para mejorar la experiencia de juego.</p>
-        </section>
+        <div class="grid">
+            <section>
+                <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
+                <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza el uso de recursos para obtener más FPS y una latencia mínima. Ideal para PvP y supervivencia técnica.</p>
+            </section>
 
-        <section class="actions">
-            <a class="btn" href="https://www.youtube.com/@bygjgaming" target="_blank" rel="noopener">Canal de YouTube: @bygjgaming</a>
-            <a class="btn secondary" href="https://github.com/BygjGamer34/BygjClient/releases/" target="_blank" rel="noopener">Descargas / Releases</a>
-        </section>
+            <section>
+                <h2><i class="fas fa-puzzle-piece"></i> Mods & Personalización</h2>
+                <p>Soporte nativo para mods esenciales. Configura tu HUD, capas y cosméticos directamente desde el menú del cliente.</p>
+            </section>
+        </div>
 
-        <section>
-            <h2>Créditos</h2>
-            <p>Proyecto desarrollado por <strong>BygjSoftware</strong>. Para soporte y actualizaciones revisa las releases en GitHub o síguenos en YouTube.</p>
+        <div class="actions">
+            <a class="btn btn-yt" href="https://www.youtube.com/@bygjgaming" target="_blank" rel="noopener">
+                <i class="fab fa-youtube"></i> Ver en YouTube
+            </a>
+            <a class="btn btn-gh" href="https://github.com/BygjGamer34/BygjClient/releases/" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> Descargar v1.0
+            </a>
+        </div>
+
+        <section style="text-align: center;">
+            <h2><i class="fas fa-code"></i> BygjSoftware</h2>
+            <p>Este es un proyecto Open Source creado por y para la comunidad. Si te gusta complicarte con los ordenadores y el código, ¡revisa nuestro repo!</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 BygjGamer34. Todos los derechos reservados.</p>
+        <p>&copy; 2026 BygjGamer34. Hecho con código y pasión por el gaming.</p>
     </footer>
+
 </body>
 </html>
