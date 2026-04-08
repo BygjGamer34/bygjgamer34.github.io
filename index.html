@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BygjClient — BygjSoftware</title>
+    <title>BygjSoftware — Proyectos</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
     
@@ -57,11 +57,17 @@
             padding: 2rem;
         }
 
+        .project-section {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         section {
@@ -82,6 +88,14 @@
             font-family: 'JetBrains Mono', monospace;
             border-left: 4px solid var(--primary);
             padding-left: 10px;
+            margin-top: 0;
+        }
+
+        .project-title {
+            color: var(--secondary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
         }
 
         .actions {
@@ -89,7 +103,7 @@
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
 
         .btn {
@@ -104,10 +118,12 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
         .btn-yt { background: #ff0000; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
         .btn-gh { background: #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+        .btn-sh { background: #222; border: 1px solid var(--primary); }
         
         .btn:hover {
             transform: scale(1.05);
@@ -127,40 +143,60 @@
 <body>
 
     <header>
-        <h1>BygjClient</h1>
-        <p class="subtitle">Elevando la experiencia de <span class="highlight">Minecraft</span> con optimización avanzada y personalización total.</p>
+        <h1>BygjSoftware</h1>
+        <p class="subtitle">Herramientas avanzadas y optimización por <span class="highlight">BygjGamer34</span>.</p>
     </header>
 
     <main>
-        <div class="grid">
-            <section>
-                <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
-                <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza Minecraft para obtener más FPS y una latencia mínima. Ideal para PvP y supervivencia técnica.</p>
-            </section>
+        <div class="project-section">
+            <h2 class="project-title">BygjClient</h2>
+            <p style="text-align: center; opacity: 0.8;">Optimización avanzada para Minecraft.</p>
+            <div class="grid">
+                <section>
+                    <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
+                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza Minecraft para obtener más FPS y una latencia mínima. Ideal para PvP y supervivencia técnica.</p>
+                </section>
+                <section>
+                    <h2><i class="fas fa-puzzle-piece"></i> Mods & Personalización</h2>
+                    <p>Soporte nativo para mods esenciales y funciones exclusivas que innovarán tu forma de jugar.</p>
+                </section>
+            </div>
+            <div class="actions">
+                <a class="btn btn-gh" href="https://github.com/BygjGamer34/BygjClient/releases/" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> Descargar BygjClient
+                </a>
+            </div>
+        </div>
 
-            <section>
-                <h2><i class="fas fa-puzzle-piece"></i> Mods & Personalización</h2>
-                <p>Soporte nativo para mods esenciales. Y próximamente dos funciones que innovarán los clientes de Minecraft como nunca.</p>
-            </section>
+        <div class="project-section">
+            <h2 class="project-title" style="color: var(--primary);">BygjShell</h2>
+            <p style="text-align: center; opacity: 0.8;">Tu terminal personalizada con superpoderes.</p>
+            <div class="grid">
+                <section>
+                    <h2><i class="fas fa-terminal"></i> Comando Local</h2>
+                    <p>Control total del sistema con comandos personalizados como <strong>sys, ip</strong> y gestión de atajos mediante alias dinámicos.</p>
+                </section>
+                <section>
+                    <h2><i class="fas fa-shield-alt"></i> Seguridad</h2>
+                    <p>Modos avanzados de ejecución y herramientas integradas para mejorar tu productividad sin complicaciones.</p>
+                </section>
+            </div>
+            <div class="actions">
+                <a class="btn btn-sh" href="https://github.com/BygjGamer34/BygjShell/releases/" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> Descargar BygjShell
+                </a>
+            </div>
         </div>
 
         <div class="actions">
             <a class="btn btn-yt" href="https://www.youtube.com/@bygjgaming" target="_blank" rel="noopener">
-                <i class="fab fa-youtube"></i> Canal de YouTube
-            </a>
-            <a class="btn btn-gh" href="https://github.com/BygjGamer34/BygjClient/releases/" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> Descargar o actualizar
+                <i class="fab fa-youtube"></i> Visitar Canal de YouTube
             </a>
         </div>
-
-        <section style="text-align: center;">
-            <h2><i class="fas fa-code"></i> BygjSoftware</h2>
-            <p>Este es un proyecto Open Source creado por y para la comunidad. Si te gustan los clientes de Minecraft y el código, ¡revisa nuestro repo!</p>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 BygjGamer34. Hecho con código y pasión por el gaming.</p>
+        <p>&copy; 2026 BygjGamer34. Software privado desarrollado con pasión por el gaming.</p>
     </footer>
 
 </body>
