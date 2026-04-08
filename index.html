@@ -14,6 +14,7 @@
             --bg-dark: #0f111a;
             --card-bg: #1a1c29;
             --text-light: #e0e0e0;
+            --disabled: #444;
         }
 
         body {
@@ -125,9 +126,23 @@
         .btn-gh { background: #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
         .btn-sh { background: #222; border: 1px solid var(--primary); }
         
-        .btn:hover {
-            transform: scale(1.05);
-            filter: brightness(1.2);
+        /* Botón desactivado */
+        .btn-disabled {
+            background: var(--disabled);
+            cursor: not-allowed;
+            opacity: 0.6;
+            box-shadow: none;
+        }
+        .btn-disabled:hover { transform: none; filter: none; }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-left: 10px;
         }
 
         footer {
@@ -149,22 +164,22 @@
 
     <main>
         <div class="project-section">
-            <h2 class="project-title">BygjClient</h2>
+            <h2 class="project-title">BygjClient <span class="badge">EN DESARROLLO</span></h2>
             <p style="text-align: center; opacity: 0.8;">Optimización avanzada para Minecraft.</p>
             <div class="grid">
                 <section>
                     <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
-                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza Minecraft para obtener más FPS y una latencia mínima. Ideal para PvP y supervivencia técnica.</p>
+                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza Minecraft para obtener más FPS y una latencia mínima.</p>
                 </section>
                 <section>
                     <h2><i class="fas fa-puzzle-piece"></i> Mods & Personalización</h2>
-                    <p>Soporte nativo para mods esenciales y funciones exclusivas que innovarán tu forma de jugar.</p>
+                    <p>Soporte nativo para mods esenciales y funciones exclusivas en fase de pruebas interna.</p>
                 </section>
             </div>
             <div class="actions">
-                <a class="btn btn-gh" href="https://github.com/BygjGamer34/BygjClient/releases/" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> Descargar BygjClient
-                </a>
+                <span class="btn btn-disabled">
+                    <i class="fas fa-lock"></i> Próximamente (En desarrollo)
+                </span>
             </div>
         </div>
 
