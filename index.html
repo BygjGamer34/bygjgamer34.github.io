@@ -1,76 +1,236 @@
-<main>
-        <div class="project-section">
-            <h2 class="project-title">BygjClient <span class="badge">BETA V2 ACTIVA</span></h2>
-            <p style="text-align: center; opacity: 0.8;">Optimización avanzada y Launcher personalizado para Minecraft.</p>
-            
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BygjSoftware — Proyectos Oficiales</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary: #ff5722;
+            --secondary: #03a9f4;
+            --bg-dark: #0f111a;
+            --card-bg: #1a1c29;
+            --text-light: #e0e0e0;
+            --disabled: #444;
+            --accent-purple: #9c27b0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1c29 0%, #0f111a 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5rem;
+            margin: 0;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .project-section {
+            margin-bottom: 5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+        }
+
+        section:hover { transform: translateY(-5px); }
+
+        /* Roadmap Styles */
+        .roadmap-box {
+            background: #090a0f;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .roadmap-title {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .version-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .v-item {
+            padding-left: 20px;
+            border-left: 2px solid var(--disabled);
+            position: relative;
+        }
+
+        .v-item.done { border-left-color: #4caf50; }
+        .v-item.current { border-left-color: var(--secondary); font-weight: bold; }
+        
+        .v-num { font-family: 'JetBrains Mono', monospace; margin-right: 10px; }
+        .v-tag { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; margin-left: 10px; text-transform: uppercase; }
+
+        /* Buttons */
+        .actions { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-secondary { background: var(--secondary); color: white; }
+        .btn-disabled { background: var(--disabled); color: #888; cursor: not-allowed; }
+
+        footer { text-align: center; padding: 3rem; opacity: 0.5; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BygjSoftware</h1>
+        <p class="subtitle">Desarrollo de herramientas de sistema y optimización de juegos por <span style="color:var(--primary)">Bygj</span>.</p>
+    </header>
+
+    <main>
+        <div class="project-section" style="border-top: 4px solid var(--secondary);">
+            <h2 class="project-title" style="color: var(--secondary);">BygjClient</h2>
             <div class="grid">
-                <section>
-                    <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
-                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza el motor del juego para obtener FPS estables y reducir el stuttering.</p>
+                <section style="border-color: var(--secondary);">
+                    <h3><i class="fas fa-bolt"></i> Optimización</h3>
+                    <p>Launcher en Java diseñado para exprimir cada FPS de Minecraft.</p>
                 </section>
-                <section>
-                    <h2><i class="fas fa-rocket"></i> Custom Launcher</h2>
-                    <p>Interfaz única con branding de Bygj y sistema de gestión de instancias optimizado.</p>
+                <section style="border-color: var(--secondary);">
+                    <h3><i class="fas fa-cog"></i> Personalización</h3>
+                    <p>Integración de mods y branding exclusivo para una experiencia única.</p>
                 </section>
             </div>
 
-            <div class="roadmap-container">
-                <h2 style="border: none; text-align: center; margin-bottom: 2rem; color: var(--secondary);">📑 Plan de Versiones BygjClient</h2>
-                
-                <div class="roadmap-item active">
-                    <span class="roadmap-version" style="color: var(--secondary);">Fase Beta (Actual)</span>
-                    <ul class="roadmap-desc" style="list-style: none; padding-left: 0;">
-                        <li>✅ <strong>v1:</strong> Lanzamiento exitoso de Minecraft Vanilla.</li>
-                        <li>✅ <strong>v2:</strong> Integración del branding y logo oficial de BygjClient.</li>
-                        <li>⏳ <strong>v3:</strong> Implementación del menú de mods funcionales.</li>
-                        <li>⏳ <strong>v4:</strong> Sistema de auto-descarga de archivos del juego.</li>
-                        <li>⏳ <strong>v5:</strong> Autenticación oficial con cuentas Microsoft Premium.</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-item">
-                    <span class="roadmap-version" style="color: var(--accent-green);">Versiones 1.x (Estabilidad y Fabric)</span>
-                    <p class="roadmap-desc">De la 1.0 a la 1.3 nos enfocaremos en la corrección masiva de bugs. La <strong>v1.4</strong> marcará un hito con la integración total de <strong>Fabric</strong> y gestión de mods in-game. La <strong>v1.6</strong> traerá una renovación total de la interfaz.</p>
-                </div>
-
-                <div class="roadmap-item">
-                    <span class="roadmap-version" style="color: #9c27b0;">Versiones 2.x (Era de la IA)</span>
-                    <p class="roadmap-desc">Implementación de <strong>IA nativa</strong> para optimizar ajustes gráficos automáticamente (v2.0) y asistente virtual para soporte técnico del juego en tiempo real (v2.2).</p>
+            <div class="roadmap-box">
+                <div class="roadmap-title"><i class="fas fa-list-ol"></i> Roadmap de Versiones</div>
+                <div class="version-list">
+                    <div class="v-item done"><span class="v-num">Beta v1:</span> Lanzamiento Vanilla No-Premium estable.</div>
+                    <div class="v-item current"><span class="v-num">Beta v2:</span> Integración de branding y logo oficial. <span class="v-tag" style="background:#03a9f4">Actual</span></div>
+                    <div class="v-item"><span class="v-num">Beta v3:</span> Menú de mods funcionales.</div>
+                    <div class="v-item"><span class="v-num">Beta v4:</span> Sistema de auto-descarga de archivos.</div>
+                    <div class="v-item"><span class="v-num">Beta v5:</span> Login con Microsoft (Cuentas Premium).</div>
+                    <div class="v-item" style="border-left-color: #4caf50; margin-top: 10px;"><span class="v-num">v1.0 - v1.3:</span> Estabilidad y corrección masiva de errores.</div>
+                    <div class="v-item"><span class="v-num">v1.4:</span> Integración con Fabric y menú de gestión de mods.</div>
+                    <div class="v-item"><span class="v-num">v1.6:</span> Renovación total de la interfaz del Launcher.</div>
+                    <div class="v-item" style="border-left-color: var(--accent-purple);"><span class="v-num">v2.0:</span> IA de optimización automática de ajustes.</div>
+                    <div class="v-item" style="border-left-color: var(--accent-purple);"><span class="v-num">v2.2:</span> Extensión de IA para revisión y soporte en tiempo real.</div>
                 </div>
             </div>
 
             <div class="actions">
-                <span class="btn btn-disabled">
-                    <i class="fas fa-lock"></i> Beta Privada (v2)
-                </span>
+                <span class="btn btn-disabled"><i class="fas fa-lock"></i> Beta Privada v2</span>
             </div>
         </div>
 
-        <div class="project-section">
+        <div class="project-section" style="border-top: 4px solid var(--primary);">
             <h2 class="project-title" style="color: var(--primary);">BygjShell</h2>
-            <p style="text-align: center; opacity: 0.8;">Tu terminal personalizada con superpoderes.</p>
+            <div class="grid">
+                <section style="border-color: var(--primary);">
+                    <h3><i class="fas fa-terminal"></i> Híbrida</h3>
+                    <p>Usa comandos nativos y herramientas exclusivas del Bygj Engine.</p>
+                </section>
+                <section style="border-color: var(--primary);">
+                    <h3><i class="fas fa-code"></i> Java Based</h3>
+                    <p>Potencia multiplataforma lista para Windows y macOS.</p>
+                </section>
+            </div>
+
+            <div class="roadmap-box">
+                <div class="roadmap-title" style="color: var(--primary);"><i class="fas fa-map-signs"></i> Roadmap de Desarrollo</div>
+                <div class="version-list">
+                    <div class="v-item done"><span class="v-num">v1.0:</span> Versión estable lanzada. <span class="v-tag" style="background:var(--primary)">Live</span></div>
+                    <div class="v-item current" style="border-left-color: var(--primary);"><span class="v-num">v1.1:</span> Compatibilidad con PowerShell (Win) y Bash (Mac).</div>
+                    <div class="v-item"><span class="v-num">v1.2:</span> Temas personalizados JSON y flechas de historial.</div>
+                    <div class="v-item"><span class="v-num">v2.0:</span> Sistema de módulos descargables y comando 'boost'.</div>
+                    <div class="v-item"><span class="v-num">v2.5:</span> 🕹️ BygjBox: Emulador MS-DOS integrado para juegos antiguos.</div>
+                    <div class="v-item"><span class="v-num">v3.0:</span> Lenguaje .bygj y asistente técnico remoto.</div>
+                </div>
+            </div>
+
             <div class="actions">
-                <a class="btn btn-sh" href="https://github.com/BygjGamer34/BygjShell/releases/" target="_blank" rel="noopener">
+                <a href="https://github.com/BygjGamer34/BygjShell/releases/" class="btn btn-primary" target="_blank">
                     <i class="fab fa-github"></i> Descargar BygjShell v1.0
                 </a>
-            </div>
-            
-            <div class="roadmap-container">
-                <h2 style="border: none; text-align: center; margin-bottom: 2rem;">🚀 Roadmap BygjShell</h2>
-                <div class="roadmap-item active">
-                    <span class="roadmap-version">v1.1 — The Bridge Update</span>
-                    <p class="roadmap-desc">Compatibilidad con PowerShell (Win) y Bash (Mac).</p>
-                </div>
-                <div class="roadmap-item">
-                    <span class="roadmap-version">v2.5 — The Legacy Update 🕹️</span>
-                    <p class="roadmap-desc">Emulador MS-DOS (BygjBox) integrado.</p>
-                </div>
             </div>
         </div>
 
         <div class="actions">
-            <a class="btn btn-yt" href="https://www.youtube.com/@bygjgaming" target="_blank" rel="noopener">
-                <i class="fab fa-youtube"></i> Visitar Canal de YouTube
+            <a href="https://www.youtube.com/@bygj" class="btn" style="background:#ff0000; color:white;">
+                <i class="fab fa-youtube"></i> Ver Progreso en YouTube
             </a>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 BygjGamer34. Software privado desarrollado para la comunidad gamer y técnica.</p>
+    </footer>
+
+</body>
+</html>
