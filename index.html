@@ -1,184 +1,47 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BygjSoftware — Proyectos</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/eb496ab13c.js" crossorigin="anonymous"></script>
-    
-    <style>
-        :root {
-            --primary: #ff5722;
-            --secondary: #03a9f4;
-            --bg-dark: #0f111a;
-            --card-bg: #1a1c29;
-            --text-light: #e0e0e0;
-            --disabled: #444;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1a1c29 0%, #0f111a 100%);
-            padding: 4rem 1.5rem;
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        h1 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--primary);
-            text-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 1rem auto;
-        }
-
-        main {
-            flex: 1;
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-        }
-
-        .project-section {
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        section {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        h2 {
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-            margin-top: 0;
-        }
-
-        .project-title {
-            color: var(--secondary);
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-
-        .actions {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 1rem 2rem;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .btn-yt { background: #ff0000; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
-        .btn-gh { background: #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
-        .btn-sh { background: #222; border: 1px solid var(--primary); }
-        
-        /* Botón desactivado */
-        .btn-disabled {
-            background: var(--disabled);
-            cursor: not-allowed;
-            opacity: 0.6;
-            box-shadow: none;
-        }
-        .btn-disabled:hover { transform: none; filter: none; }
-
-        .badge {
-            background: var(--primary);
-            color: white;
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        .highlight { color: var(--primary); font-weight: bold; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>BygjSoftware</h1>
-        <p class="subtitle">Herramientas avanzadas y optimización por <span class="highlight">BygjGamer34</span>.</p>
-    </header>
-
-    <main>
+<main>
         <div class="project-section">
-            <h2 class="project-title">BygjClient <span class="badge">EN DESARROLLO</span></h2>
-            <p style="text-align: center; opacity: 0.8;">Optimización avanzada para Minecraft.</p>
+            <h2 class="project-title">BygjClient <span class="badge">BETA V2 ACTIVA</span></h2>
+            <p style="text-align: center; opacity: 0.8;">Optimización avanzada y Launcher personalizado para Minecraft.</p>
+            
             <div class="grid">
                 <section>
                     <h2><i class="fas fa-microchip"></i> Rendimiento</h2>
-                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza Minecraft para obtener más FPS y una latencia mínima.</p>
+                    <p>Desarrollado en <strong>Java</strong>, BygjClient optimiza el motor del juego para obtener FPS estables y reducir el stuttering.</p>
                 </section>
                 <section>
-                    <h2><i class="fas fa-puzzle-piece"></i> Mods & Personalización</h2>
-                    <p>Soporte nativo para mods esenciales y funciones exclusivas en fase de pruebas interna.</p>
+                    <h2><i class="fas fa-rocket"></i> Custom Launcher</h2>
+                    <p>Interfaz única con branding de Bygj y sistema de gestión de instancias optimizado.</p>
                 </section>
             </div>
+
+            <div class="roadmap-container">
+                <h2 style="border: none; text-align: center; margin-bottom: 2rem; color: var(--secondary);">📑 Plan de Versiones BygjClient</h2>
+                
+                <div class="roadmap-item active">
+                    <span class="roadmap-version" style="color: var(--secondary);">Fase Beta (Actual)</span>
+                    <ul class="roadmap-desc" style="list-style: none; padding-left: 0;">
+                        <li>✅ <strong>v1:</strong> Lanzamiento exitoso de Minecraft Vanilla.</li>
+                        <li>✅ <strong>v2:</strong> Integración del branding y logo oficial de BygjClient.</li>
+                        <li>⏳ <strong>v3:</strong> Implementación del menú de mods funcionales.</li>
+                        <li>⏳ <strong>v4:</strong> Sistema de auto-descarga de archivos del juego.</li>
+                        <li>⏳ <strong>v5:</strong> Autenticación oficial con cuentas Microsoft Premium.</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-item">
+                    <span class="roadmap-version" style="color: var(--accent-green);">Versiones 1.x (Estabilidad y Fabric)</span>
+                    <p class="roadmap-desc">De la 1.0 a la 1.3 nos enfocaremos en la corrección masiva de bugs. La <strong>v1.4</strong> marcará un hito con la integración total de <strong>Fabric</strong> y gestión de mods in-game. La <strong>v1.6</strong> traerá una renovación total de la interfaz.</p>
+                </div>
+
+                <div class="roadmap-item">
+                    <span class="roadmap-version" style="color: #9c27b0;">Versiones 2.x (Era de la IA)</span>
+                    <p class="roadmap-desc">Implementación de <strong>IA nativa</strong> para optimizar ajustes gráficos automáticamente (v2.0) y asistente virtual para soporte técnico del juego en tiempo real (v2.2).</p>
+                </div>
+            </div>
+
             <div class="actions">
                 <span class="btn btn-disabled">
-                    <i class="fas fa-lock"></i> Próximamente (En desarrollo)
+                    <i class="fas fa-lock"></i> Beta Privada (v2)
                 </span>
             </div>
         </div>
@@ -186,20 +49,22 @@
         <div class="project-section">
             <h2 class="project-title" style="color: var(--primary);">BygjShell</h2>
             <p style="text-align: center; opacity: 0.8;">Tu terminal personalizada con superpoderes.</p>
-            <div class="grid">
-                <section>
-                    <h2><i class="fas fa-terminal"></i> Comando Local</h2>
-                    <p>Control total del sistema con comandos personalizados como <strong>sys, ip</strong> y gestión de atajos mediante alias dinámicos.</p>
-                </section>
-                <section>
-                    <h2><i class="fas fa-shield-alt"></i> Seguridad</h2>
-                    <p>Modos avanzados de ejecución y herramientas integradas para mejorar tu productividad sin complicaciones.</p>
-                </section>
-            </div>
             <div class="actions">
                 <a class="btn btn-sh" href="https://github.com/BygjGamer34/BygjShell/releases/" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> Descargar BygjShell
+                    <i class="fab fa-github"></i> Descargar BygjShell v1.0
                 </a>
+            </div>
+            
+            <div class="roadmap-container">
+                <h2 style="border: none; text-align: center; margin-bottom: 2rem;">🚀 Roadmap BygjShell</h2>
+                <div class="roadmap-item active">
+                    <span class="roadmap-version">v1.1 — The Bridge Update</span>
+                    <p class="roadmap-desc">Compatibilidad con PowerShell (Win) y Bash (Mac).</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-version">v2.5 — The Legacy Update 🕹️</span>
+                    <p class="roadmap-desc">Emulador MS-DOS (BygjBox) integrado.</p>
+                </div>
             </div>
         </div>
 
@@ -209,10 +74,3 @@
             </a>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 BygjGamer34. Software privado desarrollado con pasión por el gaming.</p>
-    </footer>
-
-</body>
-</html>
